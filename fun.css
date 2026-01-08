@@ -1,0 +1,18 @@
+.container {
+    overflow: hidden;
+    width: 60vw;
+      height: 40vh;
+}
+
+.landscape{
+      position:fixed;
+      top: 0;
+      left: 0;
+      background-image: url('images/saul.png');
+      width: 25%;
+    height: 20%;
+      background-size:1200px 650px;
+      background-position:0px;
+      background-repeat: no-repeat;
+      z-index:-1;
+}
