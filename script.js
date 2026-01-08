@@ -27,11 +27,6 @@ toggle.addEventListener('click', () => {
 })
 
 
-// carouselContainer.forEach((item) => {
-//     item.addEventListener('mouseover', () => {
-//         item.style.animationPlayState= 'paused';
-// })
-
 carouselContainer.forEach(startCarousel);
 
 function startCarousel(carousel) {
@@ -47,100 +42,10 @@ function startCarousel(carousel) {
         }
         carousel.style.transform = `translateX(${offset}px)`;
         requestAnimationFrame(animate);
-        // let currentItem = carousel.children[currentIndex];
-        // let itemWidth = currentItem.offsetWidth;
-        //
-        //
-        // carousel.style.transform = `translateX(-100%)`;
-        // getTranslateX(carousel);
-        // function getTranslateX(element) {
-        //     const style = window.getComputedStyle(element);
-        //     const matrix = new DOMMatrix(style.transform);
-        //     console.log(matrix.m41);
-        //     return matrix.m41;
-        // }
-        //
-        // if (Math.abs(offset) >= itemWidth) {
-        //     offset = 0;
-        //     currentIndex++;
-        //
-        //     if (currentIndex >= carousel.childElementCount) {
-        //         currentIndex = 0;
-        //     }
-        //
-        //
-        //     carousel.style.transition = "none";
-        //     carousel.style.transform = `translateX(0px)`;
-        //     setTimeout(() => {
-        //         carousel.style.transition = "transform 1s linear";
-        //     }, 10);
-        // }
-        //
-        // requestAnimationFrame(animate);
+
     }
     animate();
 }
-    // let firstElement = carousel.firstElementChild;
-    // carousel.appendChild(firstElement);
-    //
-    // let offset = 0;
-    // let speed = 2;
-    // function animate() {
-    //     offset -= speed;
-    //     carousel.style.transform = `translateX(${offset}px)`;
-    //     let firstElementWidth = firstElement.offsetWidth;
-    //     if (Math.abs(offset) >= firstElementWidth) {
-    //         offset += firstElementWidth;
-    //         carousel.appendChild(carousel.firstElementChild);
-    //         carousel.style.transition = "none";
-    //         carousel.style.transform = `translateX(${offset}px)`;
-    //         setTimeout(() => {
-    //             carousel.style.transition = "transform 15s linear";
-    //         }, 1);
-    //     }
-    //     requestAnimationFrame(animate);
-    // }
-    // carousel.style.transition = "transform 0.1s linear";
-    // animate();
-
-// function infiniteLoop() {
-//     carouselContainer.forEach((item) => {
-//         item.style.transition = '15s linear'
-//         item.style.transform = 'translateX(-100%)';
-//
-//         item.addEventListener("transitionend", () => {
-//             item.style.transition = "none";
-//             item.style.transform = "translateX(0)";
-//
-//
-//             void item.offsetWidth;
-//
-//             setTimeout(() => infiniteLoop(item), 100)
-//
-//         })
-//
-//     })
-// }
-// const carouselContainers = document.querySelectorAll(".carousel__container");
-
-
-
-
-// carouselContainer.forEach((carousel) => {
-//     carousel.addEventListener("mouseover", () => {
-//         carouselContainer.forEach((item) => {
-//             item.style.transition = "transform 2s linear"
-//             item.style.animationDuration = "35s";
-//         });
-//     });
-//
-//     carousel.addEventListener("mouseout", () => {
-//          carouselContainer.forEach((item) => {
-//              item.style.transition = "transform 2s linear"
-//              item.style.animationDuration = "15s";
-//          });
-//     });
-// });
 
 let x = setInterval(function() {
 
@@ -157,7 +62,6 @@ let x = setInterval(function() {
   document.getElementById("header__timer").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
-  // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("header__timer").innerHTML = "NOW";

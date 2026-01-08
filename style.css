@@ -668,6 +668,11 @@ ul {
     cursor: pointer;
 }
 
+.footer__youtube {
+    width: 100%;
+    cursor: pointer;
+}
+
 hr {
     height: 1px;
     background: #2222;
